@@ -1,0 +1,57 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  /*font-family: "helvetica neue", helvetica;*/
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+ul.translations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.translations > li {
+  margin: 0;
+  padding: 20px 10px;
+  width: 280px;
+  float: left;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 72px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+h2 {
+  line-height: 1;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+span.lang {
+  line-height: 1;
+  display: block;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+
+

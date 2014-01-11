@@ -1,0 +1,38 @@
+{
+  "name": "translator",
+  "version": "0.0.0",
+  "description": "A website/webservice for displaying wikipedia word translations",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeke/translator.git"
+  },
+  "keywords": [
+    "translation",
+    "words",
+    "language",
+    "scraping",
+    "wikipedia"
+  ],
+  "author": "zeke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeke/translator/issues"
+  },
+  "homepage": "https://github.com/zeke/translator",
+  "devDependencies": {
+    "should": "~2.1.1",
+    "mocha": "~1.17.0"
+  },
+  "dependencies": {
+    "logfmt": "~0.18.1",
+    "jade": "~1.1.4",
+    "express": "~3.4.7",
+    "wikipedia-translator": "~0.1.0",
+    "wikipedias": "~0.1.1"
+  }
+}
