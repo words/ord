@@ -4,7 +4,7 @@
   "description": "A website/webservice for displaying wikipedia word translations",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "mocha"
   },
   "repository": {
