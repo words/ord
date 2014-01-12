@@ -8,16 +8,20 @@ body {
   font-weight: bold;
   margin: 0;
   padding: 0;
+  padding: 20px;
 }
 
 section {
-  padding: 20px;
+
 }
 
 ul.translations {
   margin: 0;
   padding: 0;
   list-style: none;
+  float: none;
+  clear: both;
+  overflow: hidden;
 }
 
 ul.translations > li {
@@ -33,12 +37,9 @@ a {
 }
 
 h1 {
-  font-size: 72px;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
+  text-align: center;
+  color: green;
 }
-
 h2 {
   line-height: 1;
   font-size: 24px;
@@ -51,7 +52,55 @@ span.lang {
   display: block;
   opacity: 0.5;
   font-size: 14px;
+  padding-top: 5px;
 }
 
+form.embedded input {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+  /*line-height: 1;*/
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
 
+form.splash input {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  border: 5px solid green;
+  border-radius: 5px;
+  outline: none;
+  margin: 50px auto 0 auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  text-align: center;
+}
 
+@media (max-width: 599px) {
+  form.splash input {
+    font-size: 18px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+}
+footer p {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #666;
+  font-weight: normal;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+footer p a {
+  text-decoration: underline;
+}

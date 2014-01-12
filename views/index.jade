@@ -2,4 +2,27 @@ extends layout
 
 block content
 
-  h1 Wikipedia Translator
+  if query
+
+    form(method="get" action="/" class="embedded")
+      input(name="query" value=query type="text" placeholder="Translate any English word" autocapitalize="off" autocorrect="off" autofocus="autofocus")
+
+    if translations
+      ul.translations
+        each t in translations
+          li
+            h2
+              a(href=t.href)= t.word.toLowerCase()
+              if wikipedias[t.lang]
+                span.lang= wikipedias[t.lang].language
+
+  else
+
+    //- h1 Wikipedia Translator
+
+    form(method="get" action="/" class="splash")
+      input(name="query" value=query type="text" placeholder="Translate any English word" autocapitalize="off" autocorrect="off" autofocus="autofocus")
+
+    //- select(name="lang")
+    //-   each key in Object.keys(wikipedias)
+    //-     option(value=key)= wikipedias[key].language

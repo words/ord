@@ -12,16 +12,22 @@ app.configure(function() {
 });
 
 app.get('/', function(req, res) {
-  res.render('index');
+
+  var locals = {
+    wikipedias: wikipedias
+  }
+
+  if (req.query.query) {
+    translate(req.query.query, function(err, translation) {
+      locals.query = translation.query
+      locals.translations = translation.translations
+      res.render('index', locals);
+    })
+  } else {
+    res.render('index', locals);
+  }
+
 });
 
-app.get('/search', function(req, res) {
-  translate(req.query.q, function(err, translation) {
-    // res.json(translation);
-    translation.wikipedias = wikipedias;
-    console.log(wikipedias);
-    res.render('search', translation);
-  })
-});
 
 app.listen(process.env.PORT || 5000)
