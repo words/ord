@@ -40,6 +40,7 @@ h1 {
   text-align: center;
   color: green;
 }
+
 h2 {
   line-height: 1;
   font-size: 24px;
@@ -86,6 +87,10 @@ form.splash input {
 @media (max-width: 599px) {
   form.splash input {
     font-size: 18px;
+  }
+
+  form.embedded input {
+   font-size: 36px;
   }
 }
 
