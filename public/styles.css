@@ -65,7 +65,7 @@ form.embedded input {
   margin: 0;
   padding: 10px;
   outline: none;
-  border: none;
+  border: 1px solid #999;
 }
 
 form.splash input {
