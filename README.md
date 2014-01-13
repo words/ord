@@ -1,7 +1,7 @@
 # Ord
 
 [Ord](https://ord.zeke.xxx) is a free service for translating words using data from Wikipedia.
-Ord is also the Danish, Icelandic, Swedish, and Norwegian word for
+Ord is also the Danish, Swedish, and Norwegian word for
 [word](http://ord.zeke.xxx/?query=word).
 Ord is hosted on
 [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs),
