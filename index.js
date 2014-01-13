@@ -18,6 +18,9 @@ app.get('/', function(req, res) {
   }
 
   if (req.query.query) {
+
+    logfmt.log({query: req.query.query})
+
     translate(req.query.query, function(err, translation) {
       locals.query = translation.query
       locals.translations = translation.translations
