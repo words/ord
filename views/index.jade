@@ -1,26 +1,28 @@
+mixin form(query, lang, cssClass)
+  form(method="get" action="/" class=cssClass)
+    input(name="query" value=query type="text" placeholder="Translate any word" autocapitalize="off" autocorrect="off" autofocus="autofocus")
+    select(name="lang")
+      each key in Object.keys(wikipedias)
+        option(value=key selected=key==lang)= wikipedias[key].language
+
 extends layout
 
 block content
 
   if query
 
-    form(method="get" action="/" class="embedded")
-      input(name="query" value=query type="text" placeholder="Translate any English word" autocapitalize="off" autocorrect="off" autofocus="autofocus")
+    +form(query, lang, "embedded")
 
     if translations
       ul.translations
         each t in translations
           li
             h2
-              a(href=t.href)= t.word.toLowerCase()
+              a(href="/?query="+ t.word.toLowerCase() + "&lang=" + t.lang)= t.word.toLowerCase()
               if wikipedias[t.lang]
-                span.lang= wikipedias[t.lang].language
+                a.lang(href=t.href)= wikipedias[t.lang].language
 
   else
 
-    form(method="get" action="/" class="splash")
-      input(name="query" value=query type="text" placeholder="Translate any English word" autocapitalize="off" autocorrect="off" autofocus="autofocus")
+    +form(query, lang, "splash")
 
-    //- select(name="lang")
-    //-   each key in Object.keys(wikipedias)
-    //-     option(value=key)= wikipedias[key].language

@@ -8,7 +8,7 @@ body {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  padding: 20px;
+  padding: 0;
 }
 
 section {
@@ -17,7 +17,7 @@ section {
 
 ul.translations {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   list-style: none;
   float: none;
   clear: both;
@@ -48,24 +48,33 @@ h2 {
   padding: 0;
 }
 
-span.lang {
+a.lang {
   line-height: 1;
   display: block;
+  color: black;
   opacity: 0.5;
   font-size: 14px;
   padding-top: 5px;
 }
 
+form.embedded {
+  background: green;
+  padding: 20px;
+}
+
 form.embedded input {
   font-family: 'PT Sans', sans-serif;
-  font-size: 72px;
+  font-size: 24px;
   font-weight: bold;
   /*line-height: 1;*/
-  width: 100%;
-  margin: 0;
-  padding: 10px;
+  max-width: 300px;
+  margin: 0 20px 0 0;
+  padding: 6px;
   outline: none;
-  border: 1px solid #999;
+  border: none;
+  background: white;
+  border-radius: 4px;
+  color: black;
 }
 
 form.splash input {
@@ -84,6 +93,12 @@ form.splash input {
   text-align: center;
 }
 
+form.splash select {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+}
+
 @media (max-width: 599px) {
   form.splash input {
     font-size: 18px;
@@ -91,6 +106,7 @@ form.splash input {
 
   form.embedded input {
    font-size: 36px;
+   max-width: 100%;
   }
 }
 

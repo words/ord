@@ -1,5 +1,6 @@
 var express = require('express')
 var logfmt = require('logfmt')
+var merge = require('merge')
 var translate = require('wikipedia-translator')
 var wikipedias = require('wikipedias')
 var app = express()
@@ -18,16 +19,17 @@ app.get('/', function(req, res) {
   }
 
   if (req.query.query) {
+    // English is the default language
+    req.query.lang || (req.query.lang = 'en')
 
-    logfmt.log({query: req.query.query})
+    // Log it so we can watch the queries go by
+    logfmt.log(req.query)
 
-    translate(req.query.query, function(err, translation) {
-      locals.query = translation.query
-      locals.translations = translation.translations
-      res.render('index', locals);
+    translate(req.query.query, req.query.lang, function(err, translation) {
+      res.render('index', merge(locals, translation))
     })
   } else {
-    res.render('index', locals);
+    res.render('index', locals)
   }
 
 });
