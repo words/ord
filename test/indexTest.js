@@ -1,0 +1,33 @@
+process.env.NODE_ENV = 'test'
+
+var assert = require("assert")
+var supertest = require("supertest")
+var app = require("..")
+
+describe("GET /", function() {
+
+  it("renders a web view", function(done) {
+    supertest(app)
+      .get("/?query=dog")
+      // .expect("Content-Type", /json/)
+      .expect(200)
+      .end(function(err, res) {
+        if (err) return done(err)
+        // assert.equal(res.body, request_id)
+        return done()
+      })
+  })
+
+  it("returns JSON if format=json query param is present", function(done) {
+    supertest(app)
+      .get("/?query=dog&format=json")
+      .expect("Content-Type", /json/)
+      .expect(200)
+      .end(function(err, res) {
+        if (err) return done(err)
+        // assert.equal(res.body, request_id)
+        done()
+      })
+  })
+
+})
