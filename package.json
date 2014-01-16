@@ -32,7 +32,7 @@
     "logfmt": "~0.18.1",
     "jade": "~1.1.4",
     "express": "~3.4.7",
-    "wikipedia-translator": "~1.0.0",
+    "wikipedia-translator": "~1.1.0",
     "wikipedias": "~0.1.1",
     "marked": "~0.3.0",
     "merge": "~1.1.2"
