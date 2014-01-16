@@ -99,17 +99,6 @@ form.splash select {
   margin: 20px auto;
 }
 
-@media (max-width: 599px) {
-  form.splash input {
-    font-size: 18px;
-  }
-
-  form.embedded input {
-   font-size: 36px;
-   max-width: 100%;
-  }
-}
-
 footer {
   margin-top: 30px;
 }
@@ -124,4 +113,31 @@ footer p {
 
 footer p a {
   text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+
+  form.splash {
+    padding: 0 20px;
+  }
+
+  footer {
+    padding: 0 20px;
+  }
+
+  form.splash input {
+    font-size: 18px;
+  }
+
+  form.embedded input {
+   font-size: 36px;
+   max-width: 100%;
+  }
+
+  form.embedded select {
+   width: 100%;
+   margin-top: 20px;
+  }
+
+
 }
