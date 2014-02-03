@@ -25,17 +25,17 @@
   },
   "homepage": "https://github.com/zeke/translator",
   "devDependencies": {
-    "should": "~2.1.1",
-    "mocha": "~1.17.0",
-    "supertest": "~0.8.3"
+    "should": "~3.1.2",
+    "mocha": "~1.17.1",
+    "supertest": "~0.9.0"
   },
   "dependencies": {
-    "logfmt": "~0.18.1",
-    "jade": "~1.1.4",
-    "express": "~3.4.7",
+    "logfmt": "~0.20.0",
+    "jade": "~1.1.5",
+    "express": "~3.4.8",
     "wikipedia-translator": "~1.1.0",
-    "wikipedias": "~0.1.1",
-    "marked": "~0.3.0",
+    "wikipedias": "~0.1.2",
+    "marked": "~0.3.1",
     "merge": "~1.1.2",
     "cors": "~2.1.1"
   }
