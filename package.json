@@ -30,7 +30,7 @@
     "supertest": "~0.9.0"
   },
   "dependencies": {
-    "logfmt": "~0.20.0",
+    "logfmt": "git+https://github.com/zeke/node-logfmt",
     "jade": "~1.1.5",
     "express": "~3.4.8",
     "wikipedia-translator": "~1.1.0",
