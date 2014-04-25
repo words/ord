@@ -1,0 +1,13 @@
+{
+  "name": "ord",
+  "urls": {
+    "source": "https://github.com/zeke/ord.git"
+  },
+  "addons": [
+    "papertrail:choklad",
+    "rethinkdb-cloud:test"
+  ],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs#npm-cert-bug"
+  }
+}
