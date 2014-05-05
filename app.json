@@ -1,13 +1,16 @@
 {
-  "name": "ord",
-  "urls": {
-    "source": "https://github.com/zeke/ord.git"
-  },
+  "name": "Ord",
+  "description": "TODO: Add a short blurb about Ord",
+  "keywords": [
+    "small",
+    "sharp",
+    "tool"
+  ],
   "addons": [
     "papertrail:choklad",
     "rethinkdb-cloud:test"
   ],
   "env": {
-    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs#npm-cert-bug"
+    "BUILDPACK_URL": "https://github.com/rwonly/heroku-buildpack-nodejs#fixpath"
   }
 }
