@@ -1,14 +1,17 @@
 {
   "name": "Ord",
-  "description": "TODO: Add a short blurb about Ord",
+  "description": "A website/webservice for displaying wikipedia word translations",
   "keywords": [
-    "small",
-    "sharp",
-    "tool"
+    "translation",
+    "words",
+    "language",
+    "scraping",
+    "wikipedia"
   ],
+  "website": "http://ord.zeke.xxx",
+  "repository": "https://github.com/zeke/ord",
   "addons": [
-    "papertrail:choklad",
-    "rethinkdb-cloud:test"
+    "papertrail:choklad"
   ],
   "env": {
     "BUILDPACK_URL": "https://github.com/rwonly/heroku-buildpack-nodejs#fixpath"
