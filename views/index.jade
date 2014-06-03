@@ -1,6 +1,6 @@
 mixin form(query, lang, cssClass)
   form(method="get" action="/" class=cssClass)
-    input(name="query" value=query type="text" placeholder="Translate any word" autocapitalize="off" autocorrect="off" autofocus="autofocus")
+    input(name="query" value=query type="text" placeholder="Translate any word" autocapitalize="off" autocorrect="off" autofocus="autofocus" tabindex=1)
     select(name="lang")
       each key in Object.keys(wikipedias)
         option(value=key selected=key==lang)= wikipedias[key].language

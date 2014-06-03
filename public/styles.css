@@ -3,12 +3,13 @@
  }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Georgia', serif;
   /*font-family: "helvetica neue", helvetica;*/
   font-weight: bold;
   margin: 0;
   padding: 0;
   padding: 0;
+  background: green;
 }
 
 section {
@@ -63,9 +64,10 @@ form.embedded {
 }
 
 form.embedded input {
-  font-family: 'PT Sans', sans-serif;
+  /*font-family: 'PT Sans', sans-serif;*/
+  font-family: 'Georgia', serif;
   font-size: 24px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   /*line-height: 1;*/
   max-width: 300px;
   margin: 0 20px 0 0;
@@ -78,10 +80,10 @@ form.embedded input {
 }
 
 form.splash input {
-  font-family: 'PT Sans', sans-serif;
+  /*font-family: 'PT Sans', sans-serif;*/
+  font-family: 'Georgia', serif;
   font-size: 24px;
-  font-weight: bold;
-  font-family: 'PT Sans', sans-serif;
+  /*font-weight: bold;*/
   border: 5px solid green;
   border-radius: 5px;
   outline: none;
@@ -105,7 +107,7 @@ footer {
 footer p {
   font-size: 18px;
   line-height: 1.4;
-  color: #666;
+  color: white;
   font-weight: normal;
   margin: 0 auto;
   max-width: 600px;
