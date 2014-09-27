@@ -18,26 +18,50 @@ app.get('/', cors(), function(req, res) {
     wikipedias: wikipedias
   }
 
+  // Support the old URL format
   if (req.query.query) {
-    // English is the default language
-    req.query.lang || (req.query.lang = 'en')
-
-    // Log it so we can watch the queries go by
-    if (process.env.NODE_ENV !== "test")
-      logfmt.log(req.query)
-
-    translate(req.query.query, req.query.lang, function(err, translation) {
-      if (req.query.format && req.query.format.match(/json/)) {
-        res.json(merge(locals, translation))
-      } else {
-        res.render('index', merge(locals, translation))
-      }
+    var url = require("url").format({
+      pathname: "/search",
+      query:req.query
     })
-  } else {
-    res.render('index', locals)
+    return res.redirect(url)
   }
 
+  res.render('index', locals)
+
 });
+
+app.get('/search', cors(), function(req, res) {
+
+  var locals = {
+    wikipedias: wikipedias
+  }
+
+  // Query param is required
+  if (!req.query || !req.query.query) {
+    return res.redirect("/")
+  }
+
+  // English is the default language
+  req.query.lang || (req.query.lang = 'en')
+
+  // Log it so we can watch the queries go by
+  if (process.env.NODE_ENV !== "test")
+    logfmt.log(req.query)
+
+  translate(req.query.query, req.query.lang, function(err, translation) {
+
+    // "/search?query="+ t.word.toLowerCase() + "&lang=" + t.lang
+
+    if (req.query.format && req.query.format.match(/json/)) {
+      res.json(merge(locals, translation))
+    } else {
+      res.render('search', merge(locals, translation))
+    }
+  })
+
+});
+
 
 if (!module.parent) {
   var port = process.env.PORT || 5000

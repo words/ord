@@ -1,0 +1,17 @@
+extends layout
+block content
+
+  form.embedded(method="get" action="/search")
+    input(name="query" value=query type="text" placeholder="Translate any word" autocapitalize="off" autocorrect="off" autofocus="autofocus")
+    select(name="lang")
+      each key in Object.keys(wikipedias)
+        option(value=key selected=key==lang)= wikipedias[key].language
+
+  if translations
+    ul.translations
+      each t in translations
+        li
+          h2
+            a(href="/search?query="+ t.word.toLowerCase() + "&lang=" + t.lang)= t.word.toLowerCase()
+            if wikipedias[t.lang]
+              a.lang(href=t.href)= wikipedias[t.lang].language
