@@ -1,12 +1,12 @@
 # Ord
 
-[ord.zeke.xxx](http://ord.zeke.xxx)
+[ord.zeke.sikelianos.com](http://ord.zeke.sikelianos.com)
 
 ## About
 
-[Ord](http://ord.zeke.xxx) is a free service for translating words using data from Wikipedia.
+[Ord](http://ord.zeke.sikelianos.com) is a free service for translating words using data from Wikipedia.
 Ord is also the Danish, Swedish, and Norwegian word for
-[word](http://ord.zeke.xxx/?query=word).
+[word](http://ord.zeke.sikelianos.com/?query=word).
 Ord is hosted on
 [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs),
 open-sourced on
@@ -18,7 +18,7 @@ and maintained by
 
 Add `format=json` to any query to get a JSON response:
 
-[ord.zeke.xxx/?query=monkey&format=json](http://ord.zeke.xxx/?query=monkey&format=json)
+[ord.zeke.sikelianos.com/?query=monkey&format=json](http://ord.zeke.sikelianos.com/?query=monkey&format=json)
 
 ## License
 
