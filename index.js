@@ -1,4 +1,5 @@
 var express = require('express')
+var harp = require('harp')
 var logfmt = require('logfmt')
 var merge = require('merge')
 var cors = require('cors')
@@ -6,12 +7,10 @@ var translate = require('wikipedia-translator')
 var wikipedias = require('wikipedias')
 var app = module.exports = express()
 
-app.configure(function() {
-  if (process.env.NODE_ENV !== "test") app.use(logfmt.requestLogger());
-  app.use(app.router);
-  app.use('/', express.static('public'));
-  app.set('view engine', 'jade');
-});
+if (process.env.NODE_ENV !== "test") app.use(logfmt.requestLogger());
+app.use(express.static(__dirname + "/public"))
+app.use(harp.mount(__dirname + "/public"));
+app.set('view engine', 'jade');
 
 app.get('/', cors(), function(req, res) {
 
@@ -41,5 +40,8 @@ app.get('/', cors(), function(req, res) {
 });
 
 if (!module.parent) {
-  app.listen(process.env.PORT || 5000)
+  var port = process.env.PORT || 5000
+  app.listen(port, function() {
+    console.log("App running on port %s", port)
+  })
 }

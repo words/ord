@@ -1,0 +1,105 @@
+*, *:before, *:after
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+body
+  font-family 'PT Sans', sans-serif
+  font-weight bold
+  margin 0
+  padding 0
+  padding 0
+
+ul
+  &.translations
+    margin 0
+    padding 20px
+    list-style none
+    float none
+    clear both
+    overflow hidden
+    & > li
+      margin 0
+      padding 20px 10px
+      width 280px
+      float left
+
+a
+  color green
+  text-decoration none
+  &.lang
+    line-height 1
+    display block
+    color black
+    opacity 0.5
+    font-size 14px
+    padding-top 5px
+
+h1
+  text-align center
+  color green
+
+h2
+  line-height 1
+  font-size 24px
+  margin 0
+  padding 0
+
+form
+  &.embedded
+    background green
+    padding 20px
+    input
+      font-family 'PT Sans', sans-serif
+      font-size 24px
+      font-weight bold
+      max-width 300px
+      margin 0 20px 0 0
+      padding 6px
+      outline none
+      border none
+      background white
+      border-radius 4px
+      color black
+      font-size 36px
+      max-width 100%
+    select
+      width 100%
+      margin-top 20px
+  &.splash
+    input
+      font-family 'PT Sans', sans-serif
+      font-size 24px
+      font-weight bold
+      font-family 'PT Sans', sans-serif
+      border 5px solid green
+      border-radius 5px
+      outline none
+      margin 50px auto 0 auto
+      padding 10px
+      width 100%
+      max-width 600px
+      display block
+      text-align center
+      font-size 18px
+    select
+      display block
+      position relative
+      margin 20px auto
+
+footer
+  margin-top 30px
+  padding 0 20px
+  p
+    font-size 18px
+    line-height 1.4
+    color #666
+    font-weight normal
+    margin 0 auto
+    max-width 600px
+    a
+      text-decoration underline
+
+@media (max-width:640px)
+  form.splash
+    padding 0 20px
