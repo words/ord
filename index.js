@@ -15,7 +15,8 @@ app.set('view engine', 'jade');
 app.get('/', cors(), function(req, res) {
 
   var locals = {
-    wikipedias: wikipedias
+    wikipedias: wikipedias,
+    hostname: req.hostname
   }
 
   // Support the old URL format
@@ -34,7 +35,8 @@ app.get('/', cors(), function(req, res) {
 app.get('/search', cors(), function(req, res) {
 
   var locals = {
-    wikipedias: wikipedias
+    wikipedias: wikipedias,
+    hostname: req.hostname
   }
 
   // Query param is required

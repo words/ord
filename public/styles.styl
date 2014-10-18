@@ -48,6 +48,10 @@ h1
   padding 0
   text-transform uppercase
 
+  &.temporary
+    a
+      text-decoration underline
+
 h2
   line-height 1
   font-size 24px
@@ -112,6 +116,8 @@ footer
 @media (max-width:640px)
   h1
     font-size 112px
+    &.temporary
+      font-size 50px
 
   form.splash
     padding 0 20px

@@ -11,20 +11,26 @@ html
 
   body
 
-    section
-      block content
+    if hostname === "ord.zeke.xxx"
+      h1.temporary
+        :markdown
+          Ord [moved](http://ord.zeke.sikelianos.com).
+    else
 
-    footer
-      :markdown
-        [Ord](http://ord.zeke.sikelianos.com) is a free service for translating words into many languages
-        using data from Wikipedia.
-        Ord is also the Danish, Swedish, and Norwegian word for
-        [word](http://ord.zeke.sikelianos.com/search?query=word).
-        Ord is hosted on
-        [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs),
-        open-sourced on
-        [GitHub](https://github.com/zeke/translator),
-        and maintained by
-        [Zeke](https://twitter.com/zeke).
-        For some background about how and why Ord was created, check out the
-        [creation story](http://origins.ord.zeke.sikelianos.com).
+      section
+        block content
+
+      footer
+        :markdown
+          [Ord](http://ord.zeke.sikelianos.com) is a free service for translating words into many languages
+          using data from Wikipedia.
+          Ord is also the Danish, Swedish, and Norwegian word for
+          [word](http://ord.zeke.sikelianos.com/search?query=word).
+          Ord is hosted on
+          [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs),
+          open-sourced on
+          [GitHub](https://github.com/zeke/translator),
+          and maintained by
+          [Zeke](https://twitter.com/zeke).
+          For some background about how and why Ord was created, check out the
+          [creation story](http://origins.ord.zeke.sikelianos.com).
