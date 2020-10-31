@@ -1,29 +1,15 @@
 {
   "name": "@zeke/ord",
   "version": "1.0.0",
-  "description": "A website/webservice for displaying wikipedia word translations",
+  "repository": "https://github.com/words/ord",
+  "author": "zeke",
+  "license": "MIT",
+  "description": "A website displaying Wikipedia word translations in multiple languages",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zeke/translator.git"
-  },
-  "keywords": [
-    "translation",
-    "words",
-    "language",
-    "scraping",
-    "wikipedia"
-  ],
-  "author": "zeke",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zeke/translator/issues"
-  },
-  "homepage": "https://github.com/zeke/translator",
   "devDependencies": {
     "mocha": "~1.17.1",
     "nodemon": "^1.2.1",
@@ -33,7 +19,6 @@
   "dependencies": {
     "cors": "~2.1.1",
     "express": "^4",
-    "harp": "^0.14.0",
     "jade": "~1.1.5",
     "logfmt": "git+https://github.com/zeke/node-logfmt",
     "marked": "~0.3.1",
@@ -41,7 +26,11 @@
     "wikipedia-translator": "~1.1.0",
     "wikipedias": "~0.1.2"
   },
-  "engines": {
-    "node": "0.10.20"
-  }
+  "keywords": [
+    "translation",
+    "words",
+    "language",
+    "scraping",
+    "wikipedia"
+  ]
 }

@@ -1,5 +1,4 @@
 var express = require('express')
-var harp = require('harp')
 var logfmt = require('logfmt')
 var merge = require('merge')
 var cors = require('cors')
@@ -9,7 +8,6 @@ var app = module.exports = express()
 
 if (process.env.NODE_ENV !== "test") app.use(logfmt.requestLogger());
 app.use(express.static(__dirname + "/public"))
-app.use(harp.mount(__dirname + "/public"));
 app.set('view engine', 'jade');
 
 app.get('/', cors(), function(req, res) {

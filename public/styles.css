@@ -1,0 +1,147 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  background: #556b2f;
+  color: #fff
+}
+
+ul.translations {
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  float: none;
+  clear: both;
+  overflow: hidden;
+}
+
+ul.translations>li {
+  margin: 0;
+  padding: 20px 10px;
+  width: 280px;
+  float: left
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.lang {
+  line-height: 1;
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  padding-top: 5px
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 30px 0 30px 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+h1.temporary a {
+  text-decoration: underline
+}
+
+h2 {
+  line-height: 1;
+  font-size: 24px;
+  margin: 0;
+  padding: 0
+}
+
+form.embedded {
+  background: #556b2f;
+  padding: 20px;
+}
+
+form.embedded input {
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  max-width: 300px;
+  margin: 0 20px 0 0;
+  padding: 6px;
+  outline: none;
+  border: none;
+  background: #fff;
+  border-radius: 4px;
+  color: #000;
+  font-size: 36px;
+  max-width: 100%
+}
+
+form.embedded select {
+  width: 100%;
+  margin-top: 20px
+}
+
+form.splash input {
+  font-family: Lato, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  border: 5px solid #556b2f;
+  border-radius: 10px;
+  outline: none;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 480px;
+  display: block;
+  text-align: center;
+  font-size: 18px
+}
+
+form.splash select {
+  display: block;
+  position: relative;
+  margin: 20px auto
+}
+
+footer {
+  margin: 40px 0 80px 0;
+  padding: 0 20px;
+}
+
+footer p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+footer p a {
+  text-decoration: underline
+}
+
+@media (max-width:640px) {
+  h1 {
+    font-size: 112px;
+  }
+
+  h1.temporary {
+    font-size: 50px
+  }
+
+  form.splash {
+    padding: 0 20px
+  }
+}
