@@ -26,7 +26,7 @@
     "marked": "~0.3.1",
     "merge": "~1.1.2",
     "wikipedia-translator": "~1.1.0",
-    "wikipedias": "~0.1.2"
+    "wikipedias": "^1.0.0"
   },
   "keywords": [
     "translation",
