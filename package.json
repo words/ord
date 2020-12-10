@@ -25,7 +25,7 @@
     "logfmt": "git+https://github.com/zeke/node-logfmt",
     "marked": "~0.3.1",
     "merge": "~1.1.2",
-    "wikipedia-translator": "~1.1.0",
+    "wikipedia-translator": "^1.2.0",
     "wikipedias": "^1.0.0"
   },
   "keywords": [
