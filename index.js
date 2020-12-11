@@ -4,6 +4,7 @@ const merge = require('merge')
 const cors = require('cors')
 const translate = require('wikipedia-translator')
 const wikipedias = require('wikipedias')
+const geojsonify = require('./lib/geojsonify')
 const app = module.exports = express()
 
 if (process.env.NODE_ENV !== 'test') app.use(logfmt.requestLogger())
@@ -49,7 +50,9 @@ app.get('/search', cors(), function (req, res) {
     if (err) console.error(err)
     // "/search?query="+ t.word.toLowerCase() + "&lang=" + t.lang
 
-    if (req.query.format && req.query.format.match(/json/)) {
+    if (req.query.format && req.query.format === 'geojson') {
+      res.json(geojsonify(translation.translations))
+    } else if (req.query.format && req.query.format === 'json') {
       res.json(merge(locals, translation))
     } else {
       res.render('search', merge(locals, translation))
