@@ -24,7 +24,7 @@
     "jade": "~1.1.5",
     "lodash": "^4.17.20",
     "logfmt": "git+https://github.com/zeke/node-logfmt",
-    "marked": "~0.3.1",
+    "marked": "~4.0.10",
     "merge": "~1.1.2",
     "wikipedia-translator": "^1.2.0",
     "wikipedias": "^1.0.0"
