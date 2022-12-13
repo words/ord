@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "cors": "~2.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jade": "~1.1.5",
     "lodash": "^4.17.20",
     "logfmt": "git+https://github.com/zeke/node-logfmt",
